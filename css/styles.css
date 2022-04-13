@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+*,
+::before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    font-family: Poppins;
+    font-size: 18px;
+}
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 8px;
+}
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+h1 { 
+    font-family: 'PT Serif', serif;
+    font-size: 36px;
+}
+h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.header {
+    width: 80%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 110px 0 96px;
+}
+.header div {
+    max-width: 432px;
+}
+.grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns:  repeat(3, minmax(200px, 1fr));
+    gap: 3rem;
+}
+.flex {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+}
+.grid-item2,
+.grid-item5 {
+    margin-top: 90px;
+}
+.designation {
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px){
+    body {
+        width: fit-content;
+        font-size: 14px;
+        padding: 12px;
+    }
+    main {
+        margin: 71px  0 20px;
+    }
+    h1 {
+        font-size: 36px;
+        margin-bottom: 38px;
+    }
+    .grid {
+        width: 100%;
+    }
+    .header {
+        width: 100%;
+        flex-flow: column nowrap;
+        margin: 0;
+        padding: 0 0 36px;
+    }
+    .grid-item2,
+    .grid-item4,
+    .grid-item6 {
+        margin-top: 50px;
+    } 
+}
+
+@media (max-width: 425px) {
+    label {
+        font-size: 14px;
+    }
+    .grid {
+        grid-template-columns:  repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.5rem;
+    }
+    .grid-item2,
+    .grid-item4,
+    .grid-item6 {
+        margin-top: 50px;
+    }
+    .grid-item5{
+        margin-top: 0;
+    }
+    .designation {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 407px) {
+    .grid-item2,
+    .grid-item4,
+    .grid-item6 {
+        margin-top: 0px;
+    }
+}
